@@ -2,22 +2,38 @@
 
 let arrSteam =[];
 
+//ver titulo
 const resultTitleSteam = titleSteam(data);
 //console.log(resultTitleSteam)
-arrSteam.appendChild(resultTitleSteam);
-document.getElementById(date).appendChild(arrSteam)
+resultTitleSteam.forEach(element => {
+  arrSteam.push(element)
+});
+arrSteam.forEach(element => {
+  let titleNews = document.createTextNode(element)
+  document.getElementById("allSteam").appendChild(titleNews)
+});
 
+//ver fecha (date)
 const resultDateSteam = dateSteam(data);
 //console.log(resultDateSteam)
+resultDateSteam.forEach(element => {
+  arrSteam.push(element)
+});
+arrSteam.forEach(element => {
+  let dateNews = document.createTextNode(element)
+  document.getElementById("allSteam").appendChild(dateNews)
+});
 
+//ver autor
 const resultAuthorSteam = authorSteam(data);
 //console.log(resultAuthorSteam)
-
-//función para visualizar todas las noticias
-//const loadData = (title, date, author) => {
-  //  for
-//}
-
+resultAuthorSteam.forEach(element => {
+  arrSteam.push(element)
+});
+arrSteam.forEach(element => {
+  let authorNews = document.createTextNode(element)
+  document.getElementById("allSteam").appendChild(authorNews)
+});
 
 
 

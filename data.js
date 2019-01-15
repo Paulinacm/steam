@@ -44,7 +44,52 @@ window.authorSteam = authorSteam;
 
 
 //ordenar alfabeticamente
+//funciones para ordenar de forma descendete y ascendente
+// Se factorizan todas las funciones para que devuelven el array en el orden deseado
+function sortNumDesc(arraySteam) {
+  let arrSteamNumDesc = arraySteam;
+  arrSteamNumDesc = arrSteamNumDesc.sort((a, b) => {
+    if (parseInt(a.num) < parseInt(b.num))
+      return 1
+    else
+      return -1
+  })
+  return arrSteamNumDesc
+}
 
+function sortNumAsc(arrayPokemones) {
+  let arrSteamNumAsc = arrayPokemones;
+  arrSteamNumAsc = arrSteamNumAsc.sort((a, b) => {
+    if (parseInt(a.num) > parseInt(b.num))
+      return 1
+    else
+      return -1
+  })
+  return arrSteamNumAsc
+}
+
+//funciones para ordernar de A-Z, y Z-A
+function sortNameAz(arrayPokemones) {
+  let arrPokemonesNameAz = arrayPokemones;
+  arrPokemonesNameAz = arrPokemonesNameAz.sort((a, b) => {
+    if (a.name > b.name)
+      return 1
+    else
+      return -1
+  })
+  return arrPokemonesNameAz
+}
+
+function sortNameZa(arrayPokemones) {
+  let arrPokemonesNameZa = arrayPokemones;
+  arrPokemonesNameZa = arrPokemonesNameZa.sort((a, b) => {
+    if (a.name < b.name)
+      return 1
+    else
+      return -1
+  })
+  return arrPokemonesNameZa
+}
 //ordenar numéricamente
 
 
