@@ -1,10 +1,10 @@
 // AQUI VA LA LOGICA. funciones filtrar, ordenar
 const data = STEAM.appnews.newsitems;
+
 //console.log(dataSteam)
 for (let i=0; i<data.length; i++) {
   //console.log(dataSteam[i].title)
 }
-
 
 //Filtros
 //filtrar por título
@@ -36,11 +36,22 @@ const authorSteam = (data) => {
   //console.log(data);
   let author = [];
   for (let i = 0; i < data.length; i++) {
-    author.push(data[i].date)
+    author.push(data[i].author)
   }
   return author;
 }
-window.authorSteam = dateSteam;
+window.authorSteam = authorSteam;
+
+
+//ordenar alfabeticamente
+
+//ordenar numéricamente
+
+
+
+
+// Mostrar la data en una interfaz: puede ser un card, una tabla, una lista, etc.
+
 
 
 /*
@@ -53,3 +64,4 @@ El primer parámetro, data, nos entrega los datos.El segundo parámetro, sortBy,
 computeStats(data): la función compute o calcular, nos permitirá hacer cálculos estadísticos básicos
 para ser mostrados de acuerdo a la data proporcionada.
 */
+
