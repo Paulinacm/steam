@@ -9,8 +9,17 @@
   <link rel="stylesheet" href="css/../style.css">
 </head>
   <body>
-        <h1>Steam</h1>
-//Filtrado
+<div class="container-fluid">
+<!-- SECCION HEADER PORTADA -->
+<div class="text-center">
+<img src="https://topesdegama.com/app/uploads/2018/06/Steam-Logotipo-750x400.png"
+  class="img-fluid" alt="Image Portada Steam">
+</div>
+<ul>
+  <div class="menu col-sm-12 color4">
+    <!--  sección filtrar y ordenar  -->
+    <div class="input input-group">
+/*Filtrado*/
 <div class="filter col-5 col-sm-4 col-md-4 col-lg-4 col-xl-4">
   <select class="form-control" id="filterType">
     <option value="" selected>Filter by</option>
@@ -19,8 +28,6 @@
         <option value="Feedlabel">Label</option>
       </select>
     </div>
-  </div>
-</div>
 //Ordenado
 <div class="ordenar col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
   <select class="form-control" id="sort">
@@ -32,7 +39,12 @@
   </div>
 </div>
     <div id="chart_div"></div>
-<footer>Copyright, 2018</footer>
+    </div>
+    </div>
+<footer>
+<div class="footer color4">
+  Copyright, 2018
+</div></footer>
     <div id="root"></div>
     <!-- <script src="./data/injuries/injuries.js"></script> -->
     <!-- <script src="./data/pokemon/pokemon.js"></script> -->
