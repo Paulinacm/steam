@@ -10,3 +10,93 @@ body {
 }
 
 */
+
+/*CONTENEDOR DE TODO, HEADER, MENU, BODY, FOOTER*/
+.container-fluid {
+  padding-right: 0px;
+  padding-left: 0px;
+  flex-wrap: wrap;
+}
+
+/*MENU*/
+.menu {
+  padding: 15px 15px;
+}
+
+/*MENU STICKY*/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: sticky;
+  top: 0px;
+  width: 100%;
+  position: -webkit-sticky;
+  /* Safari */
+  z-index: 500;
+}
+
+.filter {
+  align-self: center;
+}
+
+.ordenar {
+  align-self: center;
+
+
+}
+
+.form-control {
+  font-size: 13px;
+  color: #0a1944;
+
+}
+
+.input-group {
+  justify-content: center;
+
+}
+
+.arrowup {
+  border: #0a1944;
+}
+
+/*CUERPO , PADDING PARA CENTRAR LUGR DE LOS POKMONES Y MENU :( */
+.central {
+  padding: 12px 25px 25px 25px;
+}
+
+
+/*GRAFICO CALCULO*/
+.grafic {
+  display: flex;
+  justify-content: center;
+  width: auto;
+  height: 100%;
+  padding: 40px;
+}
+
+/*FOOTER*/
+.footer {
+  padding: 60px;
+  color: 171a21;
+  text-align: center;
+  color: #ffffff;
+}
+
+
+.color2 {
+  background: #dbeafd;
+}
+
+.color3 {
+  background: #67c1f5;
+}
+
+.color4 {
+  background: #1b2838;
+}
+
+/*COLOR ZEPLIN*/

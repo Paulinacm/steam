@@ -5,9 +5,10 @@ for (let i=0; i<data.length; i++) {
   //console.log(dataSteam[i].title)
 }
 
+
 //Filtros
 //filtrar por título
-const titleSteam = (data) =>{
+const titleSteam = (data) => {
   //console.log(data);
   let title = [];
   for (let i=0; i< data.length; i++){
@@ -15,23 +16,32 @@ const titleSteam = (data) =>{
   }
   return title;
 }
-
 window.titleSteam = titleSteam;
+
 
 //filtrar por date
 const dateSteam = (data) => {
   //console.log(data);
   let date = [];
   for (let i = 0; i < data.length; i++) {
-    title.push(data[i].date)
+    date.push(data[i].date)
   }
-  return title;
+  return date;
 }
+window.dateSteam = dateSteam;
 
-window.dateteam = dateSteam;
 
+// filtrar por autor
+const authorSteam = (data) => {
+  //console.log(data);
+  let author = [];
+  for (let i = 0; i < data.length; i++) {
+    author.push(data[i].date)
+  }
+  return author;
+}
+window.authorSteam = dateSteam;
 
-// filtrar por 
 
 /*
 filterData(data, condition): esta función filter o filtrar recibiría la data,
