@@ -12,23 +12,21 @@
 <div class="container-fluid">
 <!-- SECCION HEADER PORTADA -->
 <div class="text-center">
-<img src="https://topesdegama.com/app/uploads/2018/06/Steam-Logotipo-750x400.png"
-  class="img-fluid" alt="Image Portada Steam">
+<img src=""
+  class="img-fluid" alt="Image Header Steam">
 </div>
 <ul>
   <div class="menu col-sm-12 color4">
     <!--  sección filtrar y ordenar  -->
     <div class="input input-group">
 /*Filtrado*/
-<div class="filter col-5 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-  <select class="form-control" id="filterType">
-    <option value="" selected>Filter by</option>
-        <option value="Date">Date</option>
-        <option value="Title">Title</option>
-        <option value="Feedlabel">Label</option>
-      </select>
-    </div>
-//Ordenado
+Filtrar por
+<div class="filtrar">
+<div id="date" onclick="" class="btn btn-outline-primary">Date</div>
+<div id="author" onclick="" class="btn btn-outline-primary">Author</div>
+<div id="title" onclick="" class="btn btn-outline-primary">Title</div>
+</div>
+/*Ordenado*/
 <div class="ordenar col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
   <select class="form-control" id="sort">
         <option>Sort by</option>
@@ -38,11 +36,14 @@
     </div>
   </div>
 </div>
+<div class="column">
+  <div class="showFilterSteam" id="allSteam"> </div>
+</div>
     <div id="chart_div"></div>
     </div>
     </div>
 <footer>
-<div class="footer color4">
+<div class="footer color3">
   Copyright, 2018
 </div></footer>
     <div id="root"></div>
