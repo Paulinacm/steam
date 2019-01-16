@@ -1,11 +1,3 @@
-// AQUI VA LA LOGICA. funciones filtrar, ordenar
-const data = STEAM.appnews.newsitems;
-
-//console.log(dataSteam)
-for (let i=0; i<data.length; i++) {
-  //console.log(dataSteam[i].title)
-}
-
 //Filtros
 //filtrar por título
 const titleSteam = (data) => {
@@ -18,12 +10,37 @@ const titleSteam = (data) => {
 }
 window.titleSteam = titleSteam;
 
+// ordenar por nombre autorAZ
+let sortAuthorAz = (data) => {
+  console.log(data)
+  data = data.sort((a, b) => {
+    if (a.author > b.author)
+      return 1
+    else
+      return -1
+  })
+  return data
+}
+window.sortAuthorAz = sortAuthorAz
 
-//filtrar por date
+// ordenar por nombre autorZA
+const sortAuthorZa = (data) => {
+  data = data.sort((a, b) => {
+    if (a.author < b.author)
+      return 1
+    else
+      return -1
+  })
+  return data
+}
+window.sortAuthorZa = sortAuthorZa
+
+//filtrar por date. falta realizar calculo
 const dateSteam = (data) => {
   //console.log(data);
   let date = [];
   for (let i = 0; i < data.length; i++) {
+    
     date.push(data[i].date)
   }
   return date;
@@ -68,29 +85,6 @@ function sortNumAsc(arrayPokemones) {
   return arrSteamNumAsc
 }
 
-//funciones para ordernar de A-Z, y Z-A
-function sortNameAz(arrayPokemones) {
-  let arrPokemonesNameAz = arrayPokemones;
-  arrPokemonesNameAz = arrPokemonesNameAz.sort((a, b) => {
-    if (a.name > b.name)
-      return 1
-    else
-      return -1
-  })
-  return arrPokemonesNameAz
-}
-
-function sortNameZa(arrayPokemones) {
-  let arrPokemonesNameZa = arrayPokemones;
-  arrPokemonesNameZa = arrPokemonesNameZa.sort((a, b) => {
-    if (a.name < b.name)
-      return 1
-    else
-      return -1
-  })
-  return arrPokemonesNameZa
-}
-//ordenar numéricamente
 
 
 
