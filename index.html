@@ -9,23 +9,24 @@
   <link rel="stylesheet" href="css/../style.css">
 </head>
   <body>
-<div class="container-fluid">
-<!-- SECCION HEADER PORTADA -->
-<div class="text-center">
-<img src=""
-  class="img-fluid" alt="Image Header Steam">
-</div>
-<ul>
+    <header>
+      <div class="container-fluid">
+        <div class="text-center">
+          <img src=""
+          class="img-fluid" alt="Image Header Steam">
+        </div>
+      </div>
+    </header>
+<section>
   <div class="menu col-sm-12 color4">
-    <!--  sección filtrar y ordenar  -->
     <div class="input input-group">
-/*Filtrado
+<!-- Filtrado -->
 <div class="filtrar">
 <div id="date" onclick="" class="btn btn-outline-primary">Date</div>
 <div id="feedname" onclick="" class="btn btn-outline-primary">Feedname</div>
 <div id="title" onclick="" class="btn btn-outline-primary">Title</div>
 </div>
-/*Ordenado*/
+<!-- Ordenado -->
 <div class="ordenar col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
   <select class="form-control" id="sortAuthor">
         <option>Ordenar por Nombre de Author</option>
@@ -35,16 +36,16 @@
 </div>
   </div>
 </div>
+</section>
 <div class="column">
   <div class="showFilterSteam" id="allSteam"> </div>
-</div>
     <div id="chart_div"></div>
-    </div>
     </div>
 <footer>
 <div class="footer color3">
   Copyright, 2018
-</div></footer>
+</div>
+ </footer>
     <div id="root"></div>
     <!-- <script src="./data/injuries/injuries.js"></script> -->
     <!-- <script src="./data/pokemon/pokemon.js"></script> -->
@@ -55,4 +56,4 @@
     <script src="main.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   </body>
-</html>
+</html> 
