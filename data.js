@@ -35,6 +35,19 @@ const sortAuthorZa = (data) => {
 }
 window.sortAuthorZa = sortAuthorZa
 
+
+const sortData = (array, sortName) => {
+   console.log(array,sortName)
+   if (sortName == sortAuthorAz){
+     return sortAuthorAz
+   })
+   if else (sortName == sortAuthorZa){
+     return sortAuthorZa
+   }
+  }
+window.sortData = sortData
+
+
 //filtrar por date. falta realizar calculo
 const dateSteam = (data) => {
   //console.log(data);
