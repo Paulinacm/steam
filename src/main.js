@@ -2,15 +2,41 @@
 // AQUI VA LA LOGICA. funciones filtrar, ordenar
 const data = STEAM.appnews.newsitems;
 
+const dataSteam = document.querySelector("#allSteam .showFilterSteam");
+
 let arrSteam =[];
 
 //arrFilter = data.filter(compare => (compare.type[0] === condition || compare.type[1] === condition));
 
-//ver titulo
-const resultTitleSteam = titleSteam(data);
-//console.log(resultTitleSteam)
+
+//ORDENAR cambiarlo a select
+const nameAuthor = document.getElementById('sortAuthor');
+let sortData = 
+
+    nameAuthor.addEventListener("change", () => {
+        let sortType = nameAuthor.value;
+        console.log(sortType)
+        const arrTemp = sortData(data, sortType);
+        console.log(arrTemp)
+    });
+
+
+/*
+function start() {
+  document.getElementById("activitySelector").addEventListener("change", addActivityItem, false);
+}
+function addActivityItem() {
+  //option is selected
+  alert("yeah");
+}
+
+window.addEventListener("load", start, false);
+*/
+
+
 
 //ORDENAR en forma de boton, cambiarlo a select
+/*
 document.getElementById("author").addEventListener("click", (eventMouse) => {
     let dataOrdered = sortAuthorAz(data) 
     document.getElementById("allSteam").innerHTML =""
@@ -28,55 +54,56 @@ document.getElementById("author").addEventListener("click", (eventMouse) => {
         document.getElementById("allSteam").innerHTML += "<p>author: " + element.author+"</p>"
     });
 })
-
+*/
 
 // Función que se ejecuta al cambiar filtro u orden
 function drawSteamNews() {
   // Creo un array vacío, para recibir los array ordenados por las funciones
-  let arrPokemonesDraw = [];
+  let arrSteamNewsDraw = [];
   // obtengo que opción de orden esta seleccionada
-  let optSort = document.getElementById("sort").value;
+  let optSort = document.getElementById("sortAuthor").value;
   // obtengo que opción de filtro esta seleccionada
-  let optFilter = document.getElementById("filterType").value;
+  //let optFilter = document.getElementById("filterType").value;
 
   // Otengo array ordenado para cada tipo de filtro
   switch (optSort) {
-    case "nameaz":
-      arrPokemonesDraw = sortNameAz(arrPokemones);
+    case "sortAuthorAz":
+      arrSteamNewsDraw = sortNameAz(arrSteam);
       break;
-    case "nameza":
-      arrPokemonesDraw = sortNameZa(arrPokemones);
+    case "sortAuthorZa":
+      arrSteamNewsDraw = sortNameZa(arrSteam);
       break;
-    case "ascending":
-      arrPokemonesDraw = sortNumAsc(arrPokemones);
+    /*case "ascending":
+      arrSteamNewsDraw = sortNumAsc(arrSteam);
       break;
     case "descending":
-      arrPokemonesDraw = sortNumDesc(arrPokemones);
-      break;
+      arrSteamNewsDraw = sortNumDesc(arrSteam);
+      break;*/
     default:
-      arrPokemonesDraw = arrPokemones;
+      arrSteamNewsDraw = arrSteam;
       break;
   }
 
   if (optFilter === "") {
     // si no hay filtro seleccionado, utilizo array original de pokemones
-    arrPokemonesDraw = arrPokemones
+    arrSteamNewsDraw = arrSteam
   } else {
     // Si hay filtro seleccionado, utilizo la función para filtrar el array ya ordenado
-    arrPokemonesDraw = filterPokemon(arrPokemonesDraw, optFilter)
+    arrSteamNewsDraw = filterSteam(arrSteamNewsDraw, optFilter)
   }
 
-  dataPokemon.innerHTML = ""
-  arrPokemonesDraw.forEach(element => {
+  dataSteam.innerHTML = ""
+  arrSteamNewsDraw.forEach(element => {
     const cardPokemon = createCard(element)
-    dataPokemon.appendChild(cardPokemon);
+    dataSteam.appendChild(cardPokemon);
 
   });
-  createGoogleChart(arrPokemonesDraw)
+  //createGoogleChart(arrSteamNewsDraw)
 }
 
 
 
+///////////////////
 
 // ver titulo
 const resultTitleSteam = titleSteam(data)
