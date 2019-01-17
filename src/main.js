@@ -9,58 +9,47 @@ const containerRoot = document.getElementById('root');
 //console.log(containerRoot)
 const nameAuthor1 = document.getElementById('sortAuthor');
 
+//  document.getElementById('root').innerHTML='';
+//document.getElementById('champions-list').innerHTML = '';
+//for (let i = 0; i < data.length; i++) {
+ //document.getElementById('allSteam').innerHTML +=
+
+
 const showData = (data) => {
     let result = '';
     //console.log(data)
-    data.forEach(element => {
-          //console.log(element.author);
-          if (element.author === '' && element.title === '') {
-            result = containerRoot.innerHTML += `
-            <div class = "col s6 m3">
-              <div class = "card">
-              <div class = "card-content">
-              <span class = "card-title activator grey-text text-darken-2"> 
-              <h6> $ {data[i].title} </h6>
-                <i class="material-icons right">more_vert</i > </span> </div> <div class = "card-reveal" >
-              <span class = "card-title grey-text text-darken-4" > ${data[i].author} 
-              <i class = "material-icons right"> close </i></span >
-              <p> Fecha: ${data[i].date} </p> 
-              <p> Game ID: ${data[i].gid} </p> 
-              <p> Feedlabel: ${data[i].feedlabel} </p> <span class = "link"
-            data - champion = '${data[i].url}' > Ver mas < /span> </div> 
-            </div> 
-              </div> ` 
-            }
-        }
+         for (let i = 0; i < data.length; i++) {
+           document.getElementById('allSteam').innerHTML += `
+          <div class = "card blue-grey darken-1"
+          style = "max-width: 18rem;">
+            <div class = "card-header"> ${data[i].date} </div> 
+            <div class = "card-body">
+            <h5 class = "card-title"> ${data[i].title} </h5> 
+            <div class = "card-reveal">
+              <span class = "card-title grey-text text-darken-4" > Card Title < i class = "material-icons right" > close < /i></span >
+              <p> Here is some more information about this product that is only revealed once clicked on. < /p> 
+              </div>
+            <p class = "card-text"> ${data[i].contents} </p> </div>  
+            </div>
+            </div > `
+            
+           }
+           return result;
+           };
+           
+        //  nameAuthor1.addEventListener('change', () => {
+        //     let sortType = nameAuthor1.options[sortAuthor.selectedIndex].text;
+        //      //console.log(sortType)
+        //     let filtered = sortDataAuthor(data, sortType);
+        //     console.log(filtered)
+        //     // limpio div
+        //     containerRoot.innerHTML = '';
 
+        //     filtered.forEach(element => {
+        //       containerRoot.innerHTML += `
+           
 
-
-         nameAuthor1.addEventListener('change', () => {
-            let sortType = nameAuthor1.options[sortAuthor.selectedIndex].text;
-             //console.log(sortType)
-            let filtered = sortDataAuthor(data, sortType);
-            console.log(filtered)
-            // limpio div
-            containerRoot.innerHTML = '';
-
-            filtered.forEach(element => {
-              containerRoot.innerHTML += `
-
-    <div>
-      <div class="card">
-        <div class="box">
-          <div class="img">
-              <img src="${element.image}">
-          </div>
-          <h2>${element.name}<br><span>${element.house}</span></h2>
-          <p>Patronus: ${element.patronus}</p>
-        </div>
-      </div>
-    </div>`
-            })
-          })
-
-          window.onload = showData(data);
+window.onload = showData(data);
         
     
 
@@ -199,6 +188,6 @@ arrSteam.forEach(element => {
 });
 
 
-/*document.getElementById('root').innerHTML = " ";
+/*
 window.onload = loadData(title, date, author)
 */
