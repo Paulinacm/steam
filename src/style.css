@@ -2,7 +2,7 @@
 #171a21;
 #c6d4df;
 #67c1f5;
-#1b2838;
+#1b2838;*/
 
 
 body {
@@ -10,19 +10,19 @@ body {
 }
 
 
-/*CONTENEDOR DE TODO, HEADER, MENU, BODY, FOOTER
+CONTENEDOR DE TODO, HEADER, MENU, BODY, FOOTER
 .container-fluid {
   padding-right: 0px;
   padding-left: 0px;
   flex-wrap: wrap;
 }
 
-/*MENU
+MENU
 .menu {
   padding: 15px 15px;
 }
 
-/*MENU STICKY
+MENU STICKY
 ul {
   list-style-type: none;
   margin: 0;
@@ -33,8 +33,6 @@ ul {
   top: 0px;
   width: 100%;
   position: -webkit-sticky;
-  /* Safari */
-  z-index: 500;
 }
 
 .filter {
@@ -62,7 +60,7 @@ ul {
   border: #0a1944;
 }
 
-/*CUERPO , PADDING PARA CENTRAR LUGR DE LOS POKMONES Y MENU :( 
+CUERPO , PADDING PARA CENTRAR LUGR DE LOS POKMONES Y MENU :( 
 .central {
   padding: 12px 25px 25px 25px;
 }
@@ -76,13 +74,14 @@ ul {
   height: 100%;
   padding: 40px;
 }
+*/
 
-/*FOOTER
+FOOTER
 .footer {
   padding: 60px;
   color: 171a21;
   text-align: center;
-  color: #ffffff;
+  color: #1b2838;
 }
 
 
@@ -90,12 +89,10 @@ ul {
   background: #dbeafd;
 }
 
-.color3 {
+.color4 {
   background: #67c1f5;
 }
 
-.color4 {
+.color3 {
   background: #1b2838;
 }
-
-/*COLOR ZEPLIN*/
