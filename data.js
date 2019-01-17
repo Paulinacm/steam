@@ -10,9 +10,11 @@ const titleSteam = (data) => {
 }
 window.titleSteam = titleSteam;
 
+//ordenar alfabeticamente
+//funciones para ordenar de forma descendete y ascendente
 // ordenar por nombre autorAZ
 let sortAuthorAz = (data) => {
-  console.log(data)
+  //console.log(data)
   data = data.sort((a, b) => {
     if (a.author > b.author)
       return 1
@@ -35,25 +37,24 @@ const sortAuthorZa = (data) => {
 }
 window.sortAuthorZa = sortAuthorZa
 
-
-const sortData = (array, sortName) => {
-   console.log(array,sortName)
+//función para que
+const sortDataAuthor = (array, sortName) => {
+   //console.log(array,sortName)
    if (sortName == sortAuthorAz){
      return sortAuthorAz
-   })
-   if else (sortName == sortAuthorZa){
+   }
+   if (sortName == sortAuthorZa){
      return sortAuthorZa
    }
   }
-window.sortData = sortData
+window.sortDataAuthor = sortDataAuthor
 
 
-//filtrar por date. falta realizar calculo
+//filtrar por date. falta realizar calculo para transformar el dato a fecha
 const dateSteam = (data) => {
   //console.log(data);
   let date = [];
   for (let i = 0; i < data.length; i++) {
-    
     date.push(data[i].date)
   }
   return date;
@@ -73,30 +74,23 @@ const authorSteam = (data) => {
 window.authorSteam = authorSteam;
 
 
-//ordenar alfabeticamente
-//funciones para ordenar de forma descendete y ascendente
-// Se factorizan todas las funciones para que devuelven el array en el orden deseado
-function sortNumDesc(arraySteam) {
-  let arrSteamNumDesc = arraySteam;
-  arrSteamNumDesc = arrSteamNumDesc.sort((a, b) => {
-    if (parseInt(a.num) < parseInt(b.num))
-      return 1
-    else
-      return -1
-  })
-  return arrSteamNumDesc
-}
 
-function sortNumAsc(arrayPokemones) {
-  let arrSteamNumAsc = arrayPokemones;
-  arrSteamNumAsc = arrSteamNumAsc.sort((a, b) => {
-    if (parseInt(a.num) > parseInt(b.num))
-      return 1
-    else
-      return -1
+const filterFeedlabel = (data, condition) => {
+  const filteredFeedlabel = data.filter(element => {
+    return element.feedlabel === condition
   })
-  return arrSteamNumAsc
-}
+  return filteredFeedlabel;
+};
+window.filterFeedlabel = filterFeedlabel
+
+
+//const sortGid = sortData(data, sortBy, sortOrder) =>
+  //console.log(data)
+
+// sortData(data, sortBy, sortOrder): esta función sort u ordenar recibe tres parámetros.
+// El primer parámetro, data, nos entrega los datos.El segundo parámetro, sortBy, 
+//nos dice con respecto a cuál de los campos de la data se quiere ordenar.El tercer parámetro, sortOrder, 
+//indica si se quiere ordenar de manera ascendente o descendente.
 
 
 
