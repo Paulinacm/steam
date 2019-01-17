@@ -12,7 +12,7 @@ const STEAM = {
       "date": 1542738000,
       "feedname": "tf2_blog",
       "feed_type": 0,
-      "appid": 440
+      "appid": 440,
     }, {
       "gid": "2403127338447896497",
       "title": "Team Fortress 2 Update Released",
