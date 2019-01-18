@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
     crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" href="css/../style.css">
 </head>
   <body>
@@ -27,30 +26,38 @@
 <div id="date" onclick="" class="btn btn-outline-primary">Date</div>
 <div id="feedname" onclick="" class="btn btn-outline-primary">Feedname</div>
 <div id="title" onclick="" class="btn btn-outline-primary">Title</div>
-</div>
-<!-- Ordenado -->
-<div class="ordenar col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-  <select class="form-control" id="sortAuthor">
-        <option>Ordenar por Nombre de Author</option>
-        <option value="a-z">A-Z</option>
-        <option value="z-a">Z-A</option>
-  </select>
-</div>
+<div class="btn-group" role="group">
+<button id="author" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"
+    aria-haspopup="true" aria-expanded="false" >
+    Ordenar por autor
+  </button>
+  <div class="dropdown-menu" aria-labelledby="Sort" id= "sortAuthor">
+    <a class="az" href="#">Ordenar A-Z</a><br>
+    <a class="za" href="#">Ordenar Z-A</a>
   </div>
 </div>
-</section>
+</div>
+<!-- Ordenado -->
+<!-- <div class="ordenar col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+  <select class="form-control" id="sortAuthor">
+     <option value="" selected>Ordenar por nombre del autor</option>
+     <option value="a-z">A-Z</option> 
+     <option value="z-a">Z-A</option>
+  </select>
+</div> -->
+  </div>
+</div>
+</section> <!--Se muestran las noticias de STEAM-->
 <div class="column">
   <div class="showFilterSteam" id="allSteam"> </div>
     <div id="chart_div"></div>
     </div>
-<footer>
+<footer> <!--Footer-->
 <div class="footer color3">
   Copyright, 2018
 </div>
  </footer>
     <div id="root"></div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <!-- <script src="./data/injuries/injuries.js"></script> -->
     <!-- <script src="./data/pokemon/pokemon.js"></script> -->
      <script src="./data/steam/steam.js"></script> 
@@ -58,6 +65,13 @@
     <!-- <script src="./data/lol/lol.js"></script> -->
     <script src="data.js"></script>
     <script src="main.js"></script>
+    <!--Bootstrap links-->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+  crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+  crossorigin="anonymous"></script>
   </body>
 </html> 
