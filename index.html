@@ -10,11 +10,10 @@
 </head>
   <body>
     <header>
-      <div class="container-fluid">
-        <div class="text-center">
-          <img src=""
-          class="img-fluid" alt="Image Header Steam">
-        </div>
+<div class="responsive_header_content">
+<div id="responsive_menu_logo">
+<img src="https://steamstore-a.akamaihd.net/public/shared/images/responsive/header_logo.png" height="36" border="0" alt="STEAM">
+  </div>
       </div>
     </header>
 <section>
@@ -32,8 +31,8 @@
     Ordenar por autor
   </button>
   <div class="dropdown-menu" aria-labelledby="Sort" id= "sortAuthor">
-    <a class="az" href="#">Ordenar A-Z</a><br>
-    <a class="za" href="#">Ordenar Z-A</a>
+    <a class="az" id= "az" href="#">Ordenar A-Z</a><br>
+    <a class="za" id="za" href="#">Ordenar Z-A</a>
   </div>
 </div>
 </div>
@@ -48,10 +47,14 @@
   </div>
 </div>
 </section> <!--Se muestran las noticias de STEAM-->
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card">
 <div class="column">
   <div class="showFilterSteam" id="allSteam"> </div>
     <div id="chart_div"></div>
     </div>
+<div id="table_div"></div>
 <footer> <!--Footer-->
 <div class="footer color3">
   Copyright, 2018
@@ -65,8 +68,9 @@
     <!-- <script src="./data/lol/lol.js"></script> -->
     <script src="data.js"></script>
     <script src="main.js"></script>
-    <!--Bootstrap links-->
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<!--Google chart link-->
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<!--Bootstrap links-->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
   crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"

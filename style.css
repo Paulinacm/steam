@@ -2,16 +2,27 @@
 #171a21;
 #c6d4df;
 #67c1f5;
-#1b2838;*/
+;
+*/
 
-
-body {
-  background: linear-gradient(111.6deg, #67c1f5 2.76%, #c6d4df 90.52%);
+h1, h2, h3, h4, h5, h6, p {
+  font-size: ;
+  color: rgb(88, 74, 148);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-align: center;
 }
 
+p {
+   font-size: 18px;
+   color: rgb(185, 125, 125);
+}
+
+body {
+  background-color: #1b2838;
+}
 
 CONTENEDOR DE TODO, HEADER, MENU, BODY, FOOTER
-.container-fluid {
+.container {
   padding-right: 0px;
   padding-left: 0px;
   flex-wrap: wrap;
@@ -23,16 +34,18 @@ MENU
 }
 
 MENU STICKY
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+.responsive_header {
+  display: none;
+  background: #384665;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 20;
+  box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.75);
   overflow: hidden;
-  background-color: #1b2838;
-  position: sticky;
-  top: 0px;
-  width: 100%;
-  position: -webkit-sticky;
+  padding: 13px 8px;
 }
 
 .filter {
@@ -66,7 +79,7 @@ CUERPO , PADDING PARA CENTRAR LUGR DE LOS POKMONES Y MENU :(
 }
 
 
-/*GRAFICO CALCULO
+
 .grafic {
   display: flex;
   justify-content: center;
@@ -74,7 +87,7 @@ CUERPO , PADDING PARA CENTRAR LUGR DE LOS POKMONES Y MENU :(
   height: 100%;
   padding: 40px;
 }
-*/
+
 
 FOOTER
 .footer {
@@ -84,10 +97,6 @@ FOOTER
   color: #1b2838;
 }
 
-
-.color2 {
-  background: #dbeafd;
-}
 
 .color4 {
   background: #67c1f5;

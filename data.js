@@ -74,7 +74,7 @@ const authorSteam = (data) => {
 window.authorSteam = authorSteam;
 
 
-
+//
 const filterFeedlabel = (data, condition) => {
   const filteredFeedlabel = data.filter(element => {
     return element.feedlabel === condition
@@ -84,20 +84,18 @@ const filterFeedlabel = (data, condition) => {
 window.filterFeedlabel = filterFeedlabel
 
 
-//const sortGid = sortData(data, sortBy, sortOrder) =>
-  //console.log(data)
+//Estadística de ejemplo
+function toDate(f) {
+  return (5 / 9) * (f - 32);
+}
+document.getElementById("chart_div").innerHTML = toDate(77);
+
+
 
 // sortData(data, sortBy, sortOrder): esta función sort u ordenar recibe tres parámetros.
 // El primer parámetro, data, nos entrega los datos.El segundo parámetro, sortBy, 
 //nos dice con respecto a cuál de los campos de la data se quiere ordenar.El tercer parámetro, sortOrder, 
 //indica si se quiere ordenar de manera ascendente o descendente.
-
-
-
-
-
-// Mostrar la data en una interfaz: puede ser un card, una tabla, una lista, etc.
-
 
 
 /*
